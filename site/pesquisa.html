@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<!--
+   Transit by TEMPLATED
+   templated.co @templatedco
+   Released for free under the Creative Commons Attribution 3.0 license (templated.co/license)
+   -->
+<html lang="en">
+   <head>
+      <meta charset="UTF-8">
+      <title>Cinema&Cidades - Pesquisa</title>
+      <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+      <meta name="description" content="" />
+      <meta name="keywords" content="" />
+      <!--[if lte IE 8]><script src="js/html5shiv.js"></script><![endif]-->
+      <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">-->
+      <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+      <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+      <script src="js/skel.min.js"></script>
+      <script src="js/skel-layers.min.js"></script>
+      <script src="js/init.js"></script>
+      <noscript>
+         <link rel="stylesheet" href="css/skel.css" />
+         <link rel="stylesheet" href="css/style.css" />
+         <link rel="stylesheet" href="css/style-xlarge.css" />
+      </noscript>
+   </head>
+   <body>
+      <!-- Header -->
+      <header id="header">
+         <h1><a href="#">Cinema&Cidades</a></h1>
+         <nav id="nav">
+            <ul>
+               <li><a href="#"></a>Home</li>
+               <li><a href="#">Contactos</a></li>
+            </ul>
+            </ul>
+         </nav>
+      </header>
+      <!-- Main -->
+      <section id="main" class="wrapper">
+         <div class="container">
+            <header class="major">
+               <h2>Pesquise por:</h2>
+               <p></p>
+            </header>
+            <!-- Text -->
+            <section class="-3u 12u(4)">
+               <h2>Filme(Título): </h2>
+               <div class="6u 12u(4)">
+                  <form action="recebeFilme.php">
+                     <input type="text" name="filme" id="filme" value="" placeholder="Título do Filme" onclick="autoSugest() " />
+                     <script type="text/javascript">
+                        function autoSugest(){
+                        //var tj= '';
+                        //console.log(tj);
+                        var queries = ["A Com�dia de Deus","A Room with a View","Det sjunde inseglet","Gladiator","Inferno","La vita � bella","Nuovo Cinema Paradiso","Schindler's List","Snatch","The Fault in Our Stars","The Pianist","V for Vendetta"];
+;
+                           console.log("Filmes na BD"+queries);
+                        //apos receber o array, fazer o autocomplete.
+                        
+                        /*$.ajax ( {
+                            url: "query.php",
+                            dataType: "json",
+                            success: function ( data, textStatus, jqXHR ) {
+                                // process the data, you only need the "data" argument
+                               // jQuery will automatically parse the JSON for you!                      
+                            }
+                        } );*/
+                        $( function() {
+                           var availableTags = queries;
+                           $( "#filme" ).autocomplete({
+                            minLength: 1,
+                            delay: 10,
+                            source: availableTags
+                             });
+                             } );
+                        /*var json_obj = jQuery.parseJSON ( ' + <?php// echo $json; ?> + ' );*/
+                        //var json_obj =                         
+                        
+                        $('#filme').keypress(function (e) {
+                        
+                        if (e.keyCode == 13) { // when user press ENTER
+                           
+                                    var filmeEscolhido = $('#filme').val();
+                                 
+                                    console.log("Enter pressionado, valor:"+filmeEscolhido)
+                                    location.href="/home/jorge/Desktop/CinemaeCidades/Website/site/elements.html";
+                        
+                                 };
+                               } // else
+                           );
+                        }
+                     </script>
+                  </form>
+               </div>
+               <!--<hr /> --><br>
+               <h2>Local/Cidade/País: </h2>
+               <div class="6u 12u(4)">
+                  <input type="text" name="name" id="local" value="" placeholder="Nome do local, cidade ou país" />
+               </div>
+               <!--<hr /> --><br>
+               <h2>Ano de realização: </h2>
+               <div class="6u 12u$(4)">
+                  <div class="select-wrapper">
+                     <select name="category" id="ano_realizacao">
+                     <option value="1901">1901</option><option value="1957">1957</option><option value="1968">1968</option><option value="1985">1985</option><option value="1988">1988</option><option value="1993">1993</option><option value="1995">1995</option><option value="1997">1997</option><option value="1998">1998</option><option value="2000">2000</option><option value="2002">2002</option><option value="2005">2005</option><option value="2014">2014</option><option value="2016">2016</option>                     </select>
+                  </div>
+               </div>
+               <!--<hr /> --><br>
+               <h2>Realizador: </h2>
+               <div class="6u 12u(4)">
+                  <input type="text" name="name" id="realizador" value="" placeholder="Nome do realizador" />
+               </div>
+               <!--<hr /> --><br>
+            </section>
+         </div>
+      </section>
+      <footer id="footer">
+         <div class="container">
+            <div class="row">
+               <div class="8u 12u$(medium)">
+                  <ul class="copyright">
+                     <li>&copy; CinemaeCidades 2017. All rights reserved.</li>
+                  </ul>
+               </div>
+            </div>
+         </div>
+      </footer>
+   </body>
+</html>
