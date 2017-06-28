@@ -2,7 +2,7 @@
 
 require('db-connect.php');
 
-$codF = 11; #depois mudar para o codigo do filme pesquisado, vem do script recebeFilme.php
+#$codF = 11; #depois mudar para o codigo do filme pesquisado, vem do script recebeFilme.php
 
 $locais_query = "select `Local`.`nome_local`, `Local`.`latitude`,`Local`.`longitude` FROM `Local`, Filme, Filme2Local where Filme2Local.cod_local = `Local`.`cod_local` and Filme2Local.cod_filme = Filme.cod_filme and Filme.cod_filme=$codF"; 
 

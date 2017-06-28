@@ -2,7 +2,7 @@
 
 require('db-connect.php');
 
-$codF = 11; #depois mudar para o codigo do filme pesquisado, vem do script recebeFilme.php
+#$codF = 11; #depois mudar para o codigo do filme pesquisado, vem do script recebeFilme.php
 
 $atores_query = "SELECT Ator.nome_ator, Link.link from Ator, Link, Ator2Link, Filme2Ator, Filme where Ator.cod_ator=Ator2Link.cod_ator and Link.cod_link = Ator2Link.cod_link and Filme.cod_filme = Filme2Ator.cod_filme and  Ator.cod_ator = Filme2Ator.cod_ator and Link.cod_tipoLink=12 and Filme.cod_filme=$codF ORDER by Ator.nome_ator;"; 
 

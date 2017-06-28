@@ -2,7 +2,7 @@
 
 require('db-connect.php');
 
-$codF = 11; #depois mudar para o codigo do filme pesquisado, vem do script recebeFilme.php
+#$codF = 11; #depois mudar para o codigo do filme pesquisado, vem do script recebeFilme.php
 
 
 

@@ -47,7 +47,7 @@
             <section class="-3u 12u(4)">
                <h2>Filme(Título): </h2>
                <div class="6u 12u(4)">
-                  <form action="recebeFilme.php">
+                  <form action="filme.php" method=post>
                      <input type="text" name="filme" id="filme" value="<?php echo $filme?>" placeholder="Título do Filme" onclick="autoSugest() " />
                      <script type="text/javascript">
                         function autoSugest(){

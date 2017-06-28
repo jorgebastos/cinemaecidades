@@ -2,7 +2,7 @@
 
 require('db-connect.php');
 
-$codF = 11; #depois mudar para o codigo do filme pesquisado, vem do script recebeFilme.php
+#$codF = 11; #depois mudar para o codigo do filme pesquisado, vem do script recebeFilme.php
 
 $dataRealizacao_query = "SELECT DataRealizacao.dataRealizacao FROM DataRealizacao, Filme WHERE DataRealizacao.cod_dataRealizacao = Filme.cod_dataRealizacao and Filme.cod_filme=$codF"; 
 

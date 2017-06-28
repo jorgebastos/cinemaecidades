@@ -1,7 +1,7 @@
 <?php
 require('db-connect.php');
 
-$codF = 11; #depois mudar para o codigo do filme pesquisado, vem do script recebeFilme.php
+#$codF = 11; #depois mudar para o codigo do filme pesquisado, vem do script recebeFilme.php
 
 $youtube_query = "select Link.link from Link, Filme2Link, Filme where Filme.cod_filme = Filme2Link.cod_filme and Link.cod_link = Filme2Link.cod_link and Link.cod_tipoLink=4 and Filme.cod_filme=$codF;"; 
 
