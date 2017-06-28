@@ -4,7 +4,7 @@
 
 $dbname = 'cinemaecidades';
 $dbuser = 'cinemaecidades';
-$dbpass = 'jorgepbastos8';
+$dbpass = '';
 $dbhost = 'cinemaecidades.dsi.uminho.pt';
 
 $link = mysqli_connect($dbhost, $dbuser, $dbpass) or die("Unable to Connect to '$dbhost'");
