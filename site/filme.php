@@ -32,7 +32,7 @@
          <h1>Cinema&Cidades</a></h1>
          <nav id="nav">
             <ul>
-               <li><a href="index.html">Home</a></li>
+               <li><a href="index.php">Home</a></li>
                <li><a href="pesquisa.php">Pesquisar</a></li>
                <li><a href="#">Contactos</a></li>
             </ul>
@@ -45,9 +45,10 @@
             <header class="major">
                <?php 
                   require('db-connect.php');
-                  #$filme = $_POST['filme'];
-                  #$titulo="'".$filme."'";
-                  $titulo="'Snatch'";
+                  $filme = $_POST['filme'];
+                  $titulo="'".$filme."'";
+                  $t=$filme;
+                  #$titulo="'Snatch'";
                   $cod_query = "SELECT Filme.cod_filme from Filme WHERE Filme.titulo=$titulo";
                   
                   #echo $pontuacao_query;
@@ -67,7 +68,7 @@
                   
                   #$codF =4;
                   ?>
-               <h2><?php echo $titulo; ?></h2>
+               <h2><?php echo $t; ?></h2>
                <!--FAZER SCRIPT PARA O TITULO DO FILME-->
                <?php require('imdbRating.php') ?>
             </header>

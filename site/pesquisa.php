@@ -30,7 +30,7 @@
          <h1><a href="#">Cinema&Cidades</a></h1>
          <nav id="nav">
             <ul>
-               <li><a href="#"></a>Home</li>
+               <li><a href="http://cinemaecidades.dsi.uminho.pt/"></a>Home</li>
                <li><a href="#">Contactos</a></li>
             </ul>
             </ul>
