@@ -170,7 +170,7 @@
             <div class="row">
                <div class="8u 12u$(medium)">
                   <ul class="copyright">
-                     <li>&copy; CinemaeCidades 2017. All rights reserved.</li>
+                     <li>Projeto CinemaeCidades 2017</li>
                   </ul>
                </div>
             </div>

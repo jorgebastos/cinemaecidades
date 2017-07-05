@@ -27,10 +27,10 @@
    <body>
       <!-- Header -->
       <header id="header">
-         <h1><a href="#">Cinema&Cidades</a></h1>
+         <h1>Cinema&Cidades</h1>
          <nav id="nav">
             <ul>
-               <li><a href="http://cinemaecidades.dsi.uminho.pt/"></a>Home</li>
+               <li><a href="index.php">Home</a></li>
                <li><a href="#">Contactos</a></li>
             </ul>
             </ul>
@@ -121,7 +121,7 @@
             <div class="row">
                <div class="8u 12u$(medium)">
                   <ul class="copyright">
-                     <li>&copy; CinemaeCidades 2017. All rights reserved.</li>
+                     <li>Projeto CinemaeCidades 2017</li>
                   </ul>
                </div>
             </div>
